@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Visible, Hidden } from 'react-grid-system'
+import { Col } from 'react-grid-system'
 
 import { MarginRow, ImageWithShadow, HideForMdAndAbove } from '../../containers'
 import { Paragraph } from '../../text-elements'

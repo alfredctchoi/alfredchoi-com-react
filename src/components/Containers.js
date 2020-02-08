@@ -34,6 +34,10 @@ export const UnstyledList = styled.ul({
   padding: 0
 })
 
+export const StyledUnorderedList = styled.ul({
+  margin: 0
+})
+
 export const InlineListItem = styled.li({
   display: 'inline',
   marginLeft: 5,
@@ -51,3 +55,15 @@ export const HideForMdAndAbove = ({ children }) => (
     {children}
   </Hidden>
 )
+
+export const VerticalCenterContainer = styled.div({
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center'
+})
+
+export const VerticalBaselineContainer = styled.div({
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'baseline'
+})

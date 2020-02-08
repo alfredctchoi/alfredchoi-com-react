@@ -1,7 +1,7 @@
 import telusLogo from './logos/telus.png';
-import scotiabank from './logos/scotiabank.svg';
+import scotiabank from './logos/scotiabank.png';
 import credico from './logos/credico.png';
-import scribblelive from './logos/scribblelive.png';
+import scribblelive from './logos/scribblelive.jpg';
 import itravel2000 from './logos/itravel2000.svg';
 import enprecis from './logos/enprecis.png';
 
