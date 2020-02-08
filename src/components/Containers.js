@@ -1,5 +1,6 @@
+import React from 'react'
 import styled from 'styled-components'
-import { Row } from 'react-grid-system'
+import { Row, Hidden } from 'react-grid-system'
 
 const addMarginFunction = ({
   vertical,
@@ -38,3 +39,15 @@ export const InlineListItem = styled.li({
   marginLeft: 5,
   marginRight: 5
 })
+
+export const ImageWithShadow = styled.img(({ showShadow = true }) => {
+  return {
+    boxShadow: showShadow && '5px 5px 5px rgba(0,0,0,0.2)'
+  }
+})
+
+export const HideForMdAndAbove = ({ children }) => (
+  <Hidden md={true} lg={true} xl={true}>
+    {children}
+  </Hidden>
+)
