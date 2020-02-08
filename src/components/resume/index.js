@@ -1,9 +1,10 @@
 import React from 'react';
-import linkedinIcon from '../../logos/linkedin.png';
-import emailIcon from '../../logos/email.png';
-import './App.css';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'react-grid-system'
+
+import linkedinIcon from '../../logos/linkedin.png';
+import emailIcon from '../../logos/email.png';
+import { UnstyledList } from '../containers'
 
 import work from '../../work';
 
@@ -55,12 +56,6 @@ const Name = styled.h1({
   marginBottom: '1rem'
 })
 
-const UnstyledList = styled.ul({
-  listStyle: 'none',
-  margin: 0,
-  padding: 0
-})
-
 const InlineListItem = styled.li({
   float: 'left',
   marginRight: '5px'
@@ -94,7 +89,7 @@ function App() {
                   />
                 </InlineListItem>
                 <InlineListItem>
-                <LinkedCompanyLogo
+                  <LinkedCompanyLogo
                     src={emailIcon}
                     link="mailto:alfred.ct.choi@gmail.com"
                     alt="email"

@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Row, Col } from 'react-grid-system'
+import { Link } from 'react-router-dom'
 
-import { CenteredTextContainer } from '../Containers'
-import Hairline from '../Hairline'
+import { CenteredTextContainer } from '../containers'
+import Hairline from '../hairline'
 
 const ImageWithShadow = styled.img(({ showShadow }) => {
   return {
@@ -27,12 +28,13 @@ const Project = ({
   description,
   title,
   image,
-  includeShadow
+  includeShadow,
+  link
 }) => {
   return (
     <ProjectContainer>
       <CenteredTextContainer>
-        <h2>{title}</h2>
+        <h3>{title}</h3>
       </CenteredTextContainer>
       <Hairline />
       <Row>
@@ -48,6 +50,7 @@ const Project = ({
           <Paragraph>
             {description}
           </Paragraph>
+          <Link to={link}>Read more >></Link>
         </Col>
       </Row>
     </ProjectContainer >
