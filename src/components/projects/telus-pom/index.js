@@ -1,11 +1,11 @@
 import React from 'react'
 import { Col, Row } from 'react-grid-system'
-import telusPlansAndDevices from '../../images/telus-plans-and-devices.png'
-import telusUsage from '../../images/telus-usage-overhaul.png'
-import telusPom from '../../images/telus-peace-of-mind.jpg'
-import telusDeviceFinancingExample from '../../images/telus-device-financing-example.png'
-import { CenteredTextContainer } from '../containers'
-import Hairline from '../hairline'
+import telusPlansAndDevices from './telus-plans-and-devices.png'
+import telusUsage from './telus-usage-overhaul.png'
+import telusPom from './telus-peace-of-mind.jpg'
+import telusDeviceFinancingExample from './telus-device-financing-example.png'
+import { CenteredTextContainer } from '../../containers'
+import Hairline from '../../hairline'
 
 export default () => {
   return (
