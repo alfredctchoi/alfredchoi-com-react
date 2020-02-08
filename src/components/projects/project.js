@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Row, Col } from 'react-grid-system'
+import { Row, Col, Container } from 'react-grid-system'
 import { Link } from 'react-router-dom'
 
 import { CenteredTextContainer } from '../containers'
@@ -19,11 +19,6 @@ const Paragraph = styled.p({
   lineHeight: '2.5rem'
 })
 
-
-const ProjectContainer = styled.article({
-
-})
-
 const Project = ({
   description,
   title,
@@ -32,28 +27,27 @@ const Project = ({
   link
 }) => {
   return (
-    <ProjectContainer>
+    <Container component="article">
       <CenteredTextContainer>
         <h3>{title}</h3>
       </CenteredTextContainer>
-      <Hairline />
       <Row>
         <Col xs={12} md={8} offset={{ md: 2 }}>
           <CenteredTextContainer>
             <ImageWithShadow
               showShadow={includeShadow}
-              style={{ height: 375 }}
+              style={{ width: '100%' }}
               src={image}
               alt={title}
             />
           </CenteredTextContainer>
           <Paragraph>
-            {description}
+            {description}{'  '}
+            <Link to={link}>Read more ></Link>
           </Paragraph>
-          <Link to={link}>Read more >></Link>
         </Col>
       </Row>
-    </ProjectContainer >
+    </Container >
   )
 }
 

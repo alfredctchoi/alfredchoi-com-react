@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { Container } from 'react-grid-system'
 import styled from 'styled-components'
 
@@ -11,6 +11,10 @@ const NavContainer = styled.div({
   paddingBottom: 15
 })
 
+const activeStyle = {
+  textDecoration: 'underline'
+}
+
 export default () => {
   return (
     <NavContainer>
@@ -20,19 +24,13 @@ export default () => {
             <strong>Navigation |</strong>
           </InlineListItem>
           <InlineListItem>
-            <Link to="/">
-              Home
-                </Link>
+            <NavLink exact activeStyle={activeStyle} to="/">Home</NavLink>
           </InlineListItem>
           <InlineListItem>
-            <Link to="/projects">
-              Projects
-                </Link>
+            <NavLink activeStyle={activeStyle} to="/projects">Projects</NavLink>
           </InlineListItem>
           <InlineListItem>
-            <Link to="/resume">
-              Resume
-                </Link>
+            <NavLink activeStyle={activeStyle} to="/resume">Resume</NavLink>
           </InlineListItem>
         </UnstyledList>
       </Container>
