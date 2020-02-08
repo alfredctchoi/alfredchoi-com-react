@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 import { UnstyledList, InlineListItem } from './containers'
 
-const NavContainer = styled.div({
+const NavContainer = styled.nav({
   borderBottom: '1px solid black',
   paddingTop: 15,
   paddingBottom: 15
