@@ -32,3 +32,9 @@ export const UnstyledList = styled.ul({
   margin: 0,
   padding: 0
 })
+
+export const InlineListItem = styled.li({
+  display: 'inline',
+  marginLeft: 5,
+  marginRight: 5
+})

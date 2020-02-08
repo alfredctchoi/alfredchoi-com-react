@@ -1,15 +1,16 @@
 import React from 'react'
 import { Container } from 'react-grid-system'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
 
 import logo from '../logos/logo.png'
 import linkedinIcon from '../logos/linkedin.png'
 import emailIcon from '../logos/email.png'
-import { UnstyledList } from './containers'
+import { UnstyledList, InlineListItem } from './containers'
 
 const HeaderContainer = styled.header({
-  height: 100
+  height: 100,
+  borderBottom: '1px solid black',
+  padding: '20px 0'
 })
 
 const Name = styled.h1({
@@ -38,22 +39,16 @@ const HeaderInnerContainer = styled.div({
 })
 
 const CompanyLogoImage = styled.img({
-  height: 24
+  height: 30
 })
 
 const LinkedCompanyLogo = ({ src, link, alt }) => {
   return (
-    <a href={link} style={{ marginLeft: 10, height: 24 }}>
+    <a href={link} style={{ marginLeft: 10, height: 30 }}>
       <CompanyLogoImage src={src} alt="linkedin" />
     </a>
   )
 }
-
-const NavItem = styled.li({
-  float: 'left',
-  marginLeft: 5,
-  marginRight: 5
-})
 
 const Header = () => {
   return (
@@ -66,35 +61,20 @@ const Header = () => {
           </HeaderInnerContainer>
           <HeaderInnerContainer>
             <UnstyledList>
-              <NavItem>
-                <Link to="/">
-                  Home
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link to="/projects">
-                  Projects
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link to="/resume">
-                  Resume
-                </Link>
-              </NavItem>
-              <NavItem>
+              <InlineListItem>
                 <LinkedCompanyLogo
                   src={linkedinIcon}
                   link="https://www.linkedin.com/in/alfred-choi-28173527/"
                   alt="linkedin"
                 />
-              </NavItem>
-              <NavItem>
+              </InlineListItem>
+              <InlineListItem>
                 <LinkedCompanyLogo
                   src={emailIcon}
                   link="mailto:alfred.ct.choi@gmail.com"
                   alt="email"
                 />
-              </NavItem>
+              </InlineListItem>
             </UnstyledList>
           </HeaderInnerContainer>
         </div>
