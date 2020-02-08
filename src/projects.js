@@ -1,6 +1,6 @@
 import telusPeaceOfMind from './components/projects/telus-pom/telus-peace-of-mind.jpg'
 import telusUsageOverhaul from './components/projects/telus-pom/telus-usage-overhaul.png'
-import telusLeftNav from './components/projects/telus-left-nav/telus-left-nav.png'
+import telusLeftNav from './components/projects/telus-nav/telus-left-nav.png'
 
 export default [{
   title: 'TELUS Peace of Mind Plans',
