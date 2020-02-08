@@ -1,0 +1,1 @@
+export const isMobileViewport = (screenClass) => ['xs', 'sm'].includes(screenClass)

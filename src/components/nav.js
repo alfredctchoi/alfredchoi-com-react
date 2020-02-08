@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Container } from 'react-grid-system'
 import styled from 'styled-components'
 
-import { UnstyledList, MarginContainer, InlineListItem } from './containers'
+import { UnstyledList, InlineListItem } from './containers'
 
 const NavContainer = styled.div({
   borderBottom: '1px solid black',
