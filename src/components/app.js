@@ -1,5 +1,10 @@
-import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useLocation
+} from 'react-router-dom'
 import Header from './header'
 import Home from './home'
 import ProjectDetail from './projects/project-details'
@@ -8,9 +13,23 @@ import Projects from './projects'
 import Nav from './nav'
 import { MarginContainer } from './containers'
 
+/**
+ * Scroll to top when page changes.
+ */
+const ScrollToTop = () => {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
+  return null
+}
+
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Header />
       <Nav />
       <MarginContainer vertical={50}>
