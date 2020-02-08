@@ -28,14 +28,14 @@ export default () => {
       </Col>
     </Row>
 
-    <Hairline />
+    <Hairline vertical={30} />
 
-    <h3>Solution</h3>
     <Row>
       <Col>
         <img style={{ width: '100%' }} src={telusDeviceFinancingExample} alt="TELUS Device Financing" />
       </Col>
       <Col>
+        <h3>Solution</h3>
         <p>
           Device financing allows TELUS to clearly separate the charges for the phone plan and charges for the device if the user purchased a device with a phone plan through TELUS.  As many of the mobile devices are becoming increasingly expensive, device financing makes the devices more affordable.
         </p>
@@ -45,11 +45,11 @@ export default () => {
       </Col>
     </Row>
 
-    <Hairline />
+    <Hairline vertical={30} />
 
-    <h3>Challenges</h3>
     <Row>
       <Col>
+        <h3>Challenges</h3>
         <p>This is fundamental change in the way all the underlying systems work at  TELUS.  There needed to be collaboration and coordination from every level of the organization.  From the systems of records level all the way up to the digital experiences.</p>
         <p>Our team was responsible for updating the usage and plan change digital experiences in My TELUS.  Because the data metering systems needed to be updated to account for unlimited data usage, our team had to develop a new usage experience to accomodate for users with the new unlimited plans.</p>
       </Col>
@@ -61,14 +61,14 @@ export default () => {
     </Row>
     <Row>
       <Col>
-        <CenteredTextContainer>
-          <img style={{ height: 350 }} src={telusPlansAndDevices} alt="TELUS plans and devices" />
-        </CenteredTextContainer>
-      </Col>
-      <Col>
         <p>
           For the plan change digital experience, there were complex rules on which users were allowed to switch to the new plans and which users could only modify their existing plans.  This was done to ensure that users were gradually migrated to the new plans in a controlled manner.
         </p>
+      </Col>
+      <Col>
+        <CenteredTextContainer>
+          <img style={{ height: 350 }} src={telusPlansAndDevices} alt="TELUS plans and devices" />
+        </CenteredTextContainer>
       </Col>
     </Row>
   </div>

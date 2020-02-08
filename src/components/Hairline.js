@@ -14,7 +14,7 @@ const HorizontalRule = styled.hr(({ vertical }) => ({
 }))
 
 const Hairline = ({
-  vertical = 30
+  vertical
 }) => {
   return (
     <CenteredTextContainer>
