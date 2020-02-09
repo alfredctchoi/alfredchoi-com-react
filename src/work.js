@@ -57,20 +57,6 @@ export default [
       ]
     }]
   }, {
-    "company": "ScribbleLive",
-    "logo": scribblelive,
-    "roles": [{
-      "start": "Jul 2015",
-      "end": "Dec 2016",
-      "isCurrent": false,
-      "title": "Senior Software Engineer",
-      "responsibilities": [
-        'Led a team of developers to rebuild a content management application to provide a more intuitive user experience',
-        'Introduced ReactJS framework and provided training to upscale the team',
-        'Migrated and maintained infrastructure in AWS'
-      ]
-    }]
-  }, {
     "company": "Credico USA LLC",
     "logo": credico,
     "roles": [{
@@ -83,6 +69,20 @@ export default [
         'Designed and developed key sales application used across the world for delivering content to employees as well as senior leadership',
         'Developed a web CMS application in Angular that allows administrators to manage users and content in a mobile sales platform',
         'Worked with Senior management to ensure internal technical projects were adhering to industry standards.',
+      ]
+    }]
+  }, {
+    "company": "ScribbleLive",
+    "logo": scribblelive,
+    "roles": [{
+      "start": "Jul 2015",
+      "end": "Dec 2016",
+      "isCurrent": false,
+      "title": "Senior Software Engineer",
+      "responsibilities": [
+        'Led a team of developers to rebuild a content management application to provide a more intuitive user experience',
+        'Introduced ReactJS framework and provided training to upscale the team',
+        'Migrated and maintained infrastructure in AWS'
       ]
     }]
   }, {
