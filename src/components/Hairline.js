@@ -7,10 +7,9 @@ import { CenteredTextContainer } from './containers'
 const HorizontalRule = styled.hr(({ vertical }) => ({
   height: 1,
   border: 0,
-  borderTop: '2px dotted #e91d63',
-  margin: vertical ? `${vertical}px 0` : '1em 0',
+  borderTop: '2px dotted #ddd',
   padding: 0,
-  width: '50%',
+  width: '80%',
   display: 'inline-block'
 }))
 

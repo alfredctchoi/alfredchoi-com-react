@@ -1,8 +1,9 @@
 import React from 'react'
-import { Row, Col, Container } from 'react-grid-system'
+import { Row, Col, Container, useScreenClass } from 'react-grid-system'
 import { Link } from 'react-router-dom'
 
-import { CenteredTextContainer, ImageWithShadow } from '../containers'
+import { ImageWithShadow } from '../containers'
+import { RenderMobile, RenderDesktop, isMobileViewport } from '../../utils/screen-util'
 
 const Project = ({
   description,
@@ -11,28 +12,35 @@ const Project = ({
   includeShadow,
   link
 }) => {
+  const screenClass = useScreenClass()
+  const isMobile = isMobileViewport(screenClass)
   return (
-    <Container component="article">
-      <CenteredTextContainer>
-        <h3>{title}</h3>
-      </CenteredTextContainer>
-      <Row>
-        <Col xs={12} md={8} offset={{ md: 2 }}>
-          <CenteredTextContainer>
+    <article style={{ padding: isMobile ? 0 : '30px 0' }}>
+      <Container>
+        <Row>
+          <RenderMobile>
+            <Col xs={12} md={0}>
+              <h2>{title}</h2>
+            </Col>
+          </RenderMobile>
+          <Col xs={12} md={4}>
             <ImageWithShadow
               showShadow={includeShadow}
               style={{ width: '100%' }}
               src={image}
               alt={title}
             />
-          </CenteredTextContainer>
-          <p>
-            {description}{'  '}
+          </Col>
+          <Col xs={12} md={8}>
+            <RenderDesktop>
+              <h2>{title}</h2>
+            </RenderDesktop>
+            <p>{description}</p>
             <Link to={link}>Read more ></Link>
-          </p>
-        </Col>
-      </Row>
-    </Container >
+          </Col>
+        </Row>
+      </Container >
+    </article>
   )
 }
 

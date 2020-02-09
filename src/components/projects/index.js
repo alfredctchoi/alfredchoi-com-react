@@ -3,6 +3,7 @@ import React, { Fragment } from 'react'
 import projects from '../../projects'
 import Project from './project'
 import Hairline from '../hairline'
+import { RenderMobile } from '../../utils/screen-util'
 
 const Projects = () => {
   return <div>
@@ -10,7 +11,9 @@ const Projects = () => {
       projects.map((project) => {
         return <Fragment key={project.title}>
           <Project {...project} />
-          <Hairline />
+          <RenderMobile>
+            <Hairline />
+          </RenderMobile>
         </Fragment>
       })
     }
