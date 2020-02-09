@@ -1,4 +1,9 @@
+/**
+ * This file contains reusable containers for different parts of the application
+ */
+
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Row, Hidden } from 'react-grid-system'
 
@@ -50,12 +55,6 @@ export const ImageWithShadow = styled.img(({ showShadow = true }) => {
   }
 })
 
-export const HideForMdAndAbove = ({ children }) => (
-  <Hidden md={true} lg={true} xl={true}>
-    {children}
-  </Hidden>
-)
-
 export const VerticalCenterContainer = styled.div({
   display: 'flex',
   flexDirection: 'row',
@@ -67,3 +66,13 @@ export const VerticalBaselineContainer = styled.div({
   flexDirection: 'row',
   alignItems: 'baseline'
 })
+
+export const HideForMdAndAbove = ({ children }) => (
+  <Hidden md={true} lg={true} xl={true}>
+    {children}
+  </Hidden>
+)
+
+HideForMdAndAbove.propTypes = {
+  children: PropTypes.node.isRequired
+}

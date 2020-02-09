@@ -26,6 +26,7 @@ const ScrollToTop = () => {
   return null
 }
 
+// Top level application component that sets the layout of the page and routing
 const App = () => {
   return (
     <Router>
