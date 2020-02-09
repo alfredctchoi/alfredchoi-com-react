@@ -2,7 +2,6 @@ import React, { Fragment } from 'react'
 
 import Aside from './aside'
 import { StyledUnorderedList } from '../containers'
-import { Text } from '../text-elements'
 
 const skills = [{
   category: 'Programming',
@@ -45,7 +44,7 @@ export default () => {
                 {items.map((item) => {
                   return (
                     <li key={item}>
-                      <Text>{item}</Text>
+                      <span>{item}</span>
                     </li>
                   )
                 })}

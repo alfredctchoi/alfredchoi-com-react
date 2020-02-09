@@ -3,36 +3,35 @@ import { NavLink } from 'react-router-dom'
 import { Container } from 'react-grid-system'
 import styled from 'styled-components'
 
-import { UnstyledList, InlineListItem } from './containers'
+import { hideOnPrint } from '../utils/styles'
 
-const NavContainer = styled.nav({
-  borderBottom: '1px solid black',
+const NavContainer = styled.section({
+  borderBottom: '1px solid #ddd',
+  borderTop: '1px solid #ddd',
   paddingTop: 15,
-  paddingBottom: 15
+  paddingBottom: 15,
+  ...hideOnPrint
 })
 
 const activeStyle = {
   textDecoration: 'underline'
 }
 
+const WrappedNavLink = styled(NavLink)({
+  marginRight: 16
+})
+
 export default () => {
   return (
     <NavContainer>
       <Container>
-        <UnstyledList>
-          <InlineListItem>
-            <strong>Navigation |</strong>
-          </InlineListItem>
-          <InlineListItem>
-            <NavLink exact activeStyle={activeStyle} to="/">Home</NavLink>
-          </InlineListItem>
-          <InlineListItem>
-            <NavLink activeStyle={activeStyle} to="/projects">Projects</NavLink>
-          </InlineListItem>
-          <InlineListItem>
-            <NavLink activeStyle={activeStyle} to="/resume">Resume</NavLink>
-          </InlineListItem>
-        </UnstyledList>
+        <nav style={{
+          display: 'flex'
+        }}>
+          <WrappedNavLink exact activeStyle={activeStyle} to="/">Home</WrappedNavLink>
+          <WrappedNavLink activeStyle={activeStyle} to="/projects">Projects</WrappedNavLink>
+          <WrappedNavLink activeStyle={activeStyle} to="/resume">Resume</WrappedNavLink>
+        </nav>
       </Container>
     </NavContainer>
   )

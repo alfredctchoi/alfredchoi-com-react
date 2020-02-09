@@ -1,9 +1,10 @@
 body {
   margin: 0;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
+  line-height: 1.75rem;
 }
 
 code {
@@ -13,4 +14,19 @@ code {
 a {
   color: #666;
   text-decoration: dotted;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+a, strong {
+  color: #e91d63;
 }

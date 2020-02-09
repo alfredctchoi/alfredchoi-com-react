@@ -1,22 +1,23 @@
 import React from 'react'
-import { Container } from 'react-grid-system'
+import { Container, useScreenClass } from 'react-grid-system'
 import styled from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons'
 
 import logo from '../logos/logo.png'
-import linkedinIcon from '../logos/linkedin.png'
-import emailIcon from '../logos/email.png'
-import { UnstyledList, InlineListItem } from './containers'
+import { Link } from './containers'
 
-const HeaderContainer = styled.header({
-  height: 100,
-  borderBottom: '1px solid black',
-  padding: '20px 0'
+const HeaderContainer = styled.header((isMobile) => {
+  return {
+    height: 100,
+    padding: isMobile ? 0 : '20px 0'
+  }
 })
 
-const Name = styled.h1({
+const Name = styled.h2({
   marginTop: 0,
-  marginBottom: 0,
-  fontSize: '2rem'
+  marginBottom: 0
 })
 
 const Logo = styled.img({
@@ -38,21 +39,14 @@ const HeaderInnerContainer = styled.div({
   alignItems: 'center',
 })
 
-const CompanyLogoImage = styled.img({
-  height: 30
+const SocialLink = styled(Link)({
+  marginLeft: 10
 })
 
-const LinkedCompanyLogo = ({ src, link, alt }) => {
-  return (
-    <a href={link} style={{ marginLeft: 10, height: 30 }}>
-      <CompanyLogoImage src={src} alt="linkedin" />
-    </a>
-  )
-}
-
 const Header = () => {
+  const screenClass = useScreenClass()
   return (
-    <HeaderContainer>
+    <HeaderContainer screenClass={screenClass}>
       <VerticalAlignContainer>
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
           <HeaderInnerContainer>
@@ -60,22 +54,21 @@ const Header = () => {
             <Name>alfred choi</Name>
           </HeaderInnerContainer>
           <HeaderInnerContainer>
-            <UnstyledList>
-              <InlineListItem>
-                <LinkedCompanyLogo
-                  src={linkedinIcon}
-                  link="https://www.linkedin.com/in/alfred-choi-28173527/"
-                  alt="linkedin"
-                />
-              </InlineListItem>
-              <InlineListItem>
-                <LinkedCompanyLogo
-                  src={emailIcon}
-                  link="mailto:alfred.ct.choi@gmail.com"
-                  alt="email"
-                />
-              </InlineListItem>
-            </UnstyledList>
+            <SocialLink
+              href="https://www.linkedin.com/in/alfred-choi-28173527/"
+              target="_blank"
+            >
+              <FontAwesomeIcon size="lg" icon={faLinkedin} />
+            </SocialLink>
+            <SocialLink
+              href="https://www.github.com/alfredctchoi"
+              target="_blank"
+            >
+              <FontAwesomeIcon size="lg" icon={faGithub} />
+            </SocialLink>
+            <SocialLink href="mailto:alfred.ct.choi@gmail.com">
+              <FontAwesomeIcon size="lg" icon={faEnvelopeSquare} />
+            </SocialLink>
           </HeaderInnerContainer>
         </div>
       </VerticalAlignContainer>

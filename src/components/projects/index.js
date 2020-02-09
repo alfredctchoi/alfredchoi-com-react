@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import projects from '../../projects'
 import Project from './project'
+import Hairline from '../hairline'
 
 const Projects = () => {
   return <div>
     {
       projects.map((project) => {
-        return <Project key={project.title} {...project} />
+        return <Fragment key={project.title}>
+          <Project {...project} />
+          <Hairline />
+        </Fragment>
       })
     }
   </div>

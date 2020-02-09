@@ -5,8 +5,10 @@ import styled from 'styled-components'
 import { isMobileViewport } from '../utils/screen-util'
 
 const DisplayHeading = styled.p(({ screenClass }) => {
+  const isMobile = isMobileViewport(screenClass)
   return {
-    fontSize: isMobileViewport(screenClass) ? '2rem' : '2.75rem'
+    lineHeight: isMobile ? '2.75rem' : '4rem',
+    fontSize: isMobile ? '2rem' : '3rem',
   }
 })
 
@@ -18,8 +20,13 @@ const Home = () => {
           <ScreenClassRender render={(screenClass) => {
             return (
               <Fragment>
-                <DisplayHeading screenClass={screenClass}>
-                  Technical Lead at TELUS Digital working with NodeJS {'&'} React to  transform a 100 year old telecommunications company.
+                <DisplayHeading
+                  screenClass={screenClass}
+                  style={{
+                    marginTop: 0,
+                    marginBottom: '3rem'
+                  }}>
+                  <strong>Technical Lead</strong> at TELUS Digital working with <strong>NodeJS {'&'} React</strong> to  transform a 100 year old telecommunications company.
                 </DisplayHeading>
                 <DisplayHeading screenClass={screenClass}>
                   Building software to drive customer and business efficiencies is my passion.

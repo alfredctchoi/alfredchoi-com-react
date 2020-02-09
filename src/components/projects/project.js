@@ -3,7 +3,6 @@ import { Row, Col, Container } from 'react-grid-system'
 import { Link } from 'react-router-dom'
 
 import { CenteredTextContainer, ImageWithShadow } from '../containers'
-import { Paragraph } from '../text-elements'
 
 const Project = ({
   description,
@@ -27,10 +26,10 @@ const Project = ({
               alt={title}
             />
           </CenteredTextContainer>
-          <Paragraph>
+          <p>
             {description}{'  '}
             <Link to={link}>Read more ></Link>
-          </Paragraph>
+          </p>
         </Col>
       </Row>
     </Container >

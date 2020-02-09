@@ -5,6 +5,8 @@ import {
   Route,
   useLocation
 } from 'react-router-dom'
+import { ScreenClassRender, useScreenClass } from 'react-grid-system'
+
 import Header from './header'
 import Home from './home'
 import ProjectDetail from './projects/project-details'
@@ -12,6 +14,7 @@ import Resume from './resume'
 import Projects from './projects'
 import Nav from './nav'
 import { MarginContainer } from './containers'
+import { isMobileViewport } from '../utils/screen-util'
 
 /**
  * Scroll to top when page changes.
@@ -28,12 +31,13 @@ const ScrollToTop = () => {
 
 // Top level application component that sets the layout of the page and routing
 const App = () => {
+  const screenClass = useScreenClass()
   return (
     <Router>
       <ScrollToTop />
       <Header />
       <Nav />
-      <MarginContainer vertical={50}>
+      <MarginContainer vertical={isMobileViewport(screenClass) ? 30 : 50}>
         <Switch>
           <Route path="/projects/:id">
             <ProjectDetail />

@@ -1,18 +1,22 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import Aside from './aside'
-import { Text } from '../text-elements'
+
+const Degree = styled.div({
+  lineHeight: '1.2rem'
+})
 
 export default () => {
   return (
     <Aside title="Education">
-      <h4 style={{ marginBottom: 0 }}>
+      <h4>
         Ryerson University (2008)
       </h4>
-      <Text lineHeight={1}>
+      <Degree>
         Bachelors of Technology,<br />
         Graphic Communications Management
-      </Text>
+      </Degree>
     </Aside>
   )
 }

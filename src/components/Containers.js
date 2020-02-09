@@ -45,8 +45,8 @@ export const StyledUnorderedList = styled.ul({
 
 export const InlineListItem = styled.li({
   display: 'inline',
-  marginLeft: 5,
-  marginRight: 5
+  marginLeft: 8,
+  marginRight: 8
 })
 
 export const ImageWithShadow = styled.img(({ showShadow = true }) => {
@@ -75,4 +75,17 @@ export const HideForMdAndAbove = ({ children }) => (
 
 HideForMdAndAbove.propTypes = {
   children: PropTypes.node.isRequired
+}
+
+export const Link = ({
+  children,
+  target,
+  ...rest
+}) => {
+  const props = {
+    ...rest,
+    target,
+    rel: target && target.toLowerCase() === '_blank' ? 'noreferrer noopener' : undefined
+  }
+  return <a {...props}>{children}</a>
 }

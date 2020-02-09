@@ -7,7 +7,7 @@ const Title = styled.h3({
   padding: '0 10px',
   display: 'inline-block',
   position: 'absolute',
-  top: -33
+  top: -18
 })
 
 export default ({
@@ -21,7 +21,8 @@ export default ({
         border: '1px solid black',
         borderRadius: 5,
         marginBottom: '2rem',
-        paddingBottom: '1.5rem'
+        paddingBottom: '1rem',
+        paddingTop: '1rem'
       }}>
       <Title>
         {title}
