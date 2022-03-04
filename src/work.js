@@ -1,18 +1,36 @@
-import telusLogo from './logos/telus.png';
-import scotiabank from './logos/scotiabank.png';
+import telusLogo from './logos/telus.svg';
+import scotiabank from './logos/scotiabank.svg';
 import credico from './logos/credico.png';
 import scribblelive from './logos/scribblelive.jpg';
 import itravel2000 from './logos/itravel2000.svg';
 import enprecis from './logos/enprecis.png';
+import amazonAds from './logos/amazon-ads.png';
 
 const work = [
+  {
+    "company": "Amazon Advertising",
+    "logo": amazonAds,
+    "roles": [{
+      "start": "May 2020",
+      "end": "",
+      "isCurrent": true,
+      "title": "Front End Engineer II",
+      "responsibilities": [
+        "Led redevelopment of the navigation system for Advertising Console’s rebranding project.  This resulted in performance improvements that include 13% reduction in Javascript execution time, 10% reduction in bundle size and 13 point increase in Lighthouse score",
+        "Designed and implemented introduction widgets system in Advertising Console to guide customers through newly launched features",
+        "Implemented a streamlined process for both stakeholders and engineers for story prioritization grooming and planning as the Scrum Master",
+        "Mentored other Front End Engineers and interns through code reviews, one on ones and pair programming",
+        "Facilitated hardware planning sessions with the broader organization to determine hardware budget for calendar year"
+      ]
+    }]
+  },
   {
     "company": "TELUS Communications",
     "logo": telusLogo,
     "roles": [{
       "start": "Oct 2019",
-      "end": "",
-      "isCurrent": true,
+      "end": "May 2020",
+      "isCurrent": false,
       "title": "Technical Lead (My TELUS)",
       "responsibilities": [
         "Lead multiple teams through the transformation of the My TELUS monolithic PHP application to React/NodeJS based micro-service architecture. This resulted in an 85% decrease in traffic to the legacy system",

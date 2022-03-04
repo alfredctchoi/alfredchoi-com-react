@@ -26,7 +26,7 @@ const Home = () => {
                     marginTop: 0,
                     marginBottom: '3rem'
                   }}>
-                  <strong>Technical Lead</strong> at TELUS Digital working with <strong>NodeJS {'&'} React</strong> to  transform a 100 year old telecommunications company.
+                  <strong>Front End Engineer II</strong> at Amazon Advertising working with <strong>React</strong> providing delightful user experiences for our customers.
                 </DisplayHeading>
                 <DisplayHeading screenClass={screenClass}>
                   Building software to drive customer and business efficiencies is my passion.
