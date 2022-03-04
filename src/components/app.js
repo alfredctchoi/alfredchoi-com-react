@@ -5,7 +5,7 @@ import {
   Route,
   useLocation
 } from 'react-router-dom'
-import { ScreenClassRender, useScreenClass } from 'react-grid-system'
+import { useScreenClass } from 'react-grid-system'
 
 import Header from './header'
 import Home from './home'

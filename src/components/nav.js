@@ -21,7 +21,7 @@ const WrappedNavLink = styled(NavLink)({
   marginRight: 16
 })
 
-export default () => {
+const Nav = () => {
   return (
     <NavContainer>
       <Container>
@@ -36,3 +36,5 @@ export default () => {
     </NavContainer>
   )
 }
+
+export default Nav

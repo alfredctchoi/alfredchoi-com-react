@@ -6,7 +6,7 @@ import oldUsage from './old.png'
 import newUsage from './new.png'
 import Hairline from '../../hairline'
 
-export default () => {
+const TelusUsage = () => {
   return (
     <div>
       <h2>TELUS Usage Redesign</h2>
@@ -61,3 +61,5 @@ export default () => {
     </div>
   )
 }
+
+export default TelusUsage

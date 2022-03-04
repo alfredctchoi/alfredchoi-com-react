@@ -36,7 +36,7 @@ const Project = ({
               <h2>{title}</h2>
             </RenderDesktop>
             <p>{description}</p>
-            <Link to={link}>Read more ></Link>
+            <Link to={link}>Read more {'>'}</Link>
           </Col>
         </Row>
       </Container >

@@ -10,7 +10,7 @@ const Title = styled.h3({
   top: -18
 })
 
-export default ({
+const Aside = ({
   children,
   title
 }) => {
@@ -31,3 +31,5 @@ export default ({
     </Container>
   )
 }
+
+export default Aside

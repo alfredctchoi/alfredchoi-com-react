@@ -38,7 +38,7 @@ const JobResponsibilityList = styled.ul({
   margin: 0
 })
 
-export default () => {
+const WorkExperience = () => {
   return <Fragment>
     <div>
       <Link
@@ -94,3 +94,5 @@ export default () => {
     }
   </Fragment>
 }
+
+export default WorkExperience

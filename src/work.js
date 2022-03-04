@@ -5,7 +5,7 @@ import scribblelive from './logos/scribblelive.jpg';
 import itravel2000 from './logos/itravel2000.svg';
 import enprecis from './logos/enprecis.png';
 
-export default [
+const work = [
   {
     "company": "TELUS Communications",
     "logo": telusLogo,
@@ -116,3 +116,5 @@ export default [
     }]
   }
 ]
+
+export default work

@@ -7,7 +7,7 @@ import telusDeviceFinancingExample from './telus-device-financing-example.png'
 import { CenteredTextContainer } from '../../containers'
 import Hairline from '../../hairline'
 
-export default () => {
+const TelusPom = () => {
   return (
     <div>
       <h2>TELUS Peace of Mind Plans</h2>
@@ -78,3 +78,5 @@ export default () => {
     </div>
   )
 }
+
+export default TelusPom

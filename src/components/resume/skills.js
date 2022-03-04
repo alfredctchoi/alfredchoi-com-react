@@ -28,7 +28,7 @@ const skills = [{
   ]
 }]
 
-export default () => {
+const Skills = () => {
   return (
     <Aside title="Skills">
       {
@@ -56,3 +56,5 @@ export default () => {
     </Aside>
   )
 }
+
+export default Skills

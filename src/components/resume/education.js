@@ -7,7 +7,7 @@ const Degree = styled.div({
   lineHeight: '1.2rem'
 })
 
-export default () => {
+const Education = () => {
   return (
     <Aside title="Education">
       <h4>
@@ -20,3 +20,5 @@ export default () => {
     </Aside>
   )
 }
+
+export default Education

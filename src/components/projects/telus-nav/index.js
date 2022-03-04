@@ -4,7 +4,7 @@ import { Row, Col } from 'react-grid-system'
 import gif from './nav-gif.gif'
 import { HideForMdAndAbove, ImageWithShadow } from '../../containers'
 
-export default () => {
+const TelusNav =  () => {
   return (
     <Row>
       <Col xs={12} md={6}>
@@ -49,3 +49,5 @@ export default () => {
     </Row>
   )
 }
+
+export default TelusNav

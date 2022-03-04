@@ -2,7 +2,7 @@ import telusPeaceOfMind from './components/projects/telus-pom/telus-peace-of-min
 import telusUsageOverhaul from './components/projects/telus-pom/telus-usage-overhaul.png'
 import telusLeftNav from './components/projects/telus-nav/telus-left-nav.png'
 
-export default [{
+const projects = [{
   title: 'TELUS Peace of Mind Plans',
   image: telusPeaceOfMind,
   includeShadow: true,
@@ -21,3 +21,5 @@ export default [{
   description: 'When I joined TELUS, the company was in the middle of a transition from their legacy technology stack to a more modern stack written in Javascript.  One of the initiatives at the time was to migrate the old navigation menu to the new stack while having it backwards compatible with the legacy stack.',
   link: '/projects/telus-nav'
 }]
+
+export default projects
