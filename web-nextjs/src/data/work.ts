@@ -14,20 +14,52 @@ export interface WorkEntry {
 
 const work: WorkEntry[] = [
   {
+    company: "Shoptravel",
+    logo: "/logos/shoptravel.svg",
+    roles: [
+      {
+        start: "Nov 2024",
+        end: "",
+        isCurrent: true,
+        title: "Principal Front End Engineer",
+        responsibilities: [
+          "Leading end-to-end development of a travel e-commerce platform (hotels, flights, packages), architecting a Next.js web application and a React Native (Expo) mobile app in a shared monorepo from the ground up",
+          "Built and lead a team of 4 frontend engineers, setting technical direction, conducting systematic code reviews, and mentoring developers to maintain high standards across the codebase",
+          "Translate high-level strategic direction from Senior Leadership into well-scoped, actionable units of work, enabling the team to deliver incrementally with clear priorities",
+          "Serve as the key liaison between UX and Backend teams, defining feature scope and negotiating design trade-offs informed by upstream API constraints to ensure feasible, user-centered solutions",
+          "Partnered with Marketing to implement API-triggered email campaigns in Braze, execute an SEO strategy (structured data, metadata optimization, sitemap generation), and integrate Google Analytics tracking to support data-driven decision-making",
+          "Established performance and quality baselines ahead of launch, achieving Lighthouse scores of 93 (Performance), 83 (Accessibility), 96 (Best Practices), and 100 (SEO)",
+        ],
+      },
+    ],
+  },
+  {
     company: "Amazon Advertising",
     logo: "/logos/amazon-ads.png",
     roles: [
       {
+        start: "Jan 2024",
+        end: "Nov 2024",
+        isCurrent: false,
+        title: "Senior Front End Engineer",
+        responsibilities: [
+          "Led a team of 6 engineers to unify the global navigation experience across federated applications in Advertising Portal",
+          "Drove technical direction for front-end architecture through prototyping and drafting technical design documents (SSR and Web Components)",
+          "Assisted leadership in roadmap planning, resource allocation, and delivery estimations for the upcoming year",
+          "Contributed to hiring by conducting technical and behavioral interviews, helping grow the team with strong candidates",
+          "Coached Front End Engineers and interns through code and design reviews, 1:1s, and pair programming",
+        ],
+      },
+      {
         start: "May 2020",
-        end: "",
-        isCurrent: true,
+        end: "Jan 2024",
+        isCurrent: false,
         title: "Front End Engineer II",
         responsibilities: [
-          "Led redevelopment of the navigation system for Advertising Console's rebranding project.  This resulted in performance improvements that include 13% reduction in Javascript execution time, 10% reduction in bundle size and 13 point increase in Lighthouse score",
-          "Designed and implemented introduction widgets system in Advertising Console to guide customers through newly launched features",
-          "Implemented a streamlined process for both stakeholders and engineers for story prioritization grooming and planning as the Scrum Master",
-          "Mentored other Front End Engineers and interns through code reviews, one on ones and pair programming",
-          "Facilitated hardware planning sessions with the broader organization to determine hardware budget for calendar year",
+          "Led redevelopment of the navigation system for Advertising Console's rebranding, achieving a 50% reduction in page load latency, 15% reduction in bundle size, and 13-point increase in Lighthouse score",
+          "Designed and implemented an introduction widgets system in Advertising Console to guide customers through newly launched features",
+          "Streamlined sprint ceremonies as Scrum Master, reducing the number of planning meetings by 50% while maintaining delivery velocity",
+          "Facilitated hardware planning across five teams to ensure applications were properly scaled for high-impact events within budget",
         ],
       },
     ],
@@ -42,10 +74,9 @@ const work: WorkEntry[] = [
         isCurrent: false,
         title: "Technical Lead (My TELUS)",
         responsibilities: [
-          "Lead multiple teams through the transformation of the My TELUS monolithic PHP application to React/NodeJS based micro-service architecture. This resulted in an 85% decrease in traffic to the legacy system",
-          "Identify optimization opportunities within the digital platform and develop solutions",
-          "Collaborate with digital partners to enhance API performance and ensure our applications free of vulnerabilities",
-          "Drive discussions with architects, tech leads and developers to determine technical direction of My TELUS",
+          "Led multiple teams through the transformation of the My TELUS monolithic PHP application to a React/Node.js microservice architecture, resulting in an 85% decrease in traffic to the legacy system",
+          "Drove cross-functional technical direction with architects and developers; optimized the stack to reduce code complexity and duplication",
+          "Improved API performance by collaborating with backend partners to identify and address slow service calls",
         ],
       },
       {
@@ -54,10 +85,8 @@ const work: WorkEntry[] = [
         isCurrent: false,
         title: "Technical Team Lead",
         responsibilities: [
-          "Led development for the introduction of Peace of Mind mobility plans and Device Financing for My TELUS",
-          "Collaborated with digital teams to develop reusable APIs and libraries",
-          "Configure automated build tools in Circle CI and GitHub Actions",
-          "Mentored junior and intermediate developers through pair programming, white boarding sessions and code reviews",
+          "Led development for the introduction of Peace of Mind Plans and Device Financing in My TELUS, collaborating across TELUS Digital to build shared applications and reduce fragmentation",
+          "Mentored junior and intermediate developers through pair programming, whiteboarding sessions, and code reviews",
         ],
       },
       {
@@ -66,9 +95,7 @@ const work: WorkEntry[] = [
         isCurrent: false,
         title: "Senior Software Developer",
         responsibilities: [
-          "Enabled users to easily conduct self serve activities by developing scalable applications in React & NodeJS for My TELUS. Projects included Usage, Phone Number Management and Rate Plan Change (2M, 250K, and 100K monthly active users respectively).",
-          "Ensured quality & consistency of applications by implementing unit and end to end testing using Jest and Nightwatch",
-          "Contributed to inner source code libraries",
+          "Developed high-traffic self-serve applications in React and Node.js for My TELUS (usage, phone number management, rate plan change — serving 2M, 250K, and 100K monthly active users respectively)",
         ],
       },
     ],
@@ -83,27 +110,7 @@ const work: WorkEntry[] = [
         isCurrent: false,
         title: "Senior Software Developer",
         responsibilities: [
-          "Developed a travel insurance prototype app for iOS using ReactNative that allows users to plan for vacations as well as purchase travel insurance",
-          "Collaborated with multiple teams to develop, test, and promote code into production while adhering to strict banking and security requirements",
-          "Conducted introductory training sessions on ReactJS and Redux",
-        ],
-      },
-    ],
-  },
-  {
-    company: "Credico USA LLC",
-    logo: "/logos/credico.png",
-    roles: [
-      {
-        start: "Jul 2013",
-        end: "Jan 2017",
-        isCurrent: false,
-        title: "Software Engineer Consultant",
-        responsibilities: [
-          "Reported directly to the CTO and helped guide technical initiatives",
-          "Designed and developed key sales application used across the world for delivering content to employees as well as senior leadership",
-          "Developed a web CMS application in Angular that allows administrators to manage users and content in a mobile sales platform",
-          "Worked with Senior management to ensure internal technical projects were adhering to industry standards.",
+          "Developed a React Native travel insurance prototype for iOS; conducted training sessions on React and Redux for cross-functional teams",
         ],
       },
     ],
@@ -116,11 +123,9 @@ const work: WorkEntry[] = [
         start: "Jul 2015",
         end: "Dec 2016",
         isCurrent: false,
-        title: "Senior Software Engineer",
+        title: "Senior Software Developer",
         responsibilities: [
-          "Led a team of developers to rebuild a content management application to provide a more intuitive user experience",
-          "Introduced ReactJS framework and provided training to upscale the team",
-          "Migrated and maintained infrastructure in AWS",
+          "Led rebuild of a content management application in React, introducing the framework to the team and providing training to upskill developers",
         ],
       },
     ],
@@ -133,29 +138,9 @@ const work: WorkEntry[] = [
         start: "Nov 2014",
         end: "Jul 2015",
         isCurrent: false,
-        title: "Senior Software Engineer",
+        title: "Senior Software Developer",
         responsibilities: [
-          "Migrated monolithic C# application into SPA and REST APIs to increase website performance",
-          "Integrated FlightNetwork's search API to provide customers with a larger selection of flights",
-          "Implemented Petro Canada partnership program to increase customer loyalty",
-          "Worked closely with the UX/UI team to implement mobile first designs for Flight purchase flow for better user experience",
-        ],
-      },
-    ],
-  },
-  {
-    company: "Enprecis Group (Formerly Vital Insights)",
-    logo: "/logos/enprecis.png",
-    roles: [
-      {
-        start: "Feb 2011",
-        end: "Nov 2014",
-        isCurrent: false,
-        title: "Intermediate Software Engineer",
-        responsibilities: [
-          "Managed multiple implementations of an international online survey system",
-          "Developed an intuitive website dashboard that provides insightful trends and analysis into survey responses",
-          "Implemented SMS integration allowing users to communicate with customers through text message through the management console",
+          "Migrated a monolithic C# application to a SPA with REST APIs; improved the flight purchase flow with a mobile-first redesign",
         ],
       },
     ],
