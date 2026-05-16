@@ -8,11 +8,11 @@ const links = [
 export default function Contact() {
   return (
     <section className="py-24 max-md:py-16 border-t border-rule-strong" id="contact">
-      <div className="mx-auto max-w-[1440px] px-8">
+      <div className="shell">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14 md:items-end">
           <div>
             <FadeIn>
-              <div className="font-[family-name:var(--mono)] text-[11px] tracking-[0.08em] text-accent font-medium">
+              <div className="font-mono text-[11px] tracking-[0.08em] text-accent font-medium">
                 04 / Contact
               </div>
             </FadeIn>
@@ -24,7 +24,7 @@ export default function Contact() {
           </div>
           <FadeIn delay={120}>
             <p className="text-muted text-sm max-w-[36ch] md:justify-self-end md:text-right m-0">
-              Open to principal / staff frontend roles focused on performance, scalability, and shipping products that deliver real business value.
+              Open to principal frontend roles focused on performance, scalability, and shipping products that deliver real business value.
             </p>
           </FadeIn>
         </div>
@@ -41,7 +41,7 @@ export default function Contact() {
             <FadeIn delay={80}>
               <a
                 href="mailto:alfred.ct.choi@gmail.com"
-                className="group inline-flex items-center gap-3.5 font-[family-name:var(--mono)] text-[15px] py-3.5 px-[18px] border border-rule-strong rounded-full transition-all duration-300 hover:bg-accent hover:text-white hover:border-accent"
+                className="group inline-flex items-center gap-3.5 font-mono text-[15px] py-3.5 px-[18px] border border-rule-strong rounded-full transition-all duration-300 hover:bg-accent hover:text-white hover:border-accent"
               >
                 alfred.ct.choi@gmail.com
                 <span className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
@@ -59,11 +59,11 @@ export default function Contact() {
                   rel="noreferrer"
                   className="group grid grid-cols-[auto_1fr_auto] gap-4 items-baseline py-4 border-t border-rule last:border-b last:border-rule text-[15px] tracking-[-0.005em] transition-[padding] duration-300 hover:pl-2"
                 >
-                  <span className="font-[family-name:var(--mono)] text-[11px] tracking-[0.06em] uppercase text-muted w-16">
+                  <span className="font-mono text-[11px] tracking-[0.06em] uppercase text-muted w-16">
                     {key}
                   </span>
                   <span>{value}</span>
-                  <span className="font-[family-name:var(--mono)] text-accent">↗</span>
+                  <span className="font-mono text-accent">↗</span>
                 </a>
               ))}
             </div>

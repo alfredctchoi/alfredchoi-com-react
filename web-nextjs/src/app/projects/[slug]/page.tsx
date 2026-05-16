@@ -39,10 +39,10 @@ export default async function ProjectDetail({
         className="sticky top-0 z-50 border-b border-rule backdrop-blur-[8px]"
         style={{ background: "color-mix(in oklab, var(--bg) 88%, transparent)" }}
       >
-        <div className="mx-auto max-w-[1440px] px-8 flex items-center justify-between py-[18px]">
+        <div className="shell flex items-center justify-between py-[18px]">
           <Link
             href="/#work"
-            className="flex items-center gap-3 font-[family-name:var(--mono)] text-[13px] tracking-[0.02em]"
+            className="flex items-center gap-3 font-mono text-[13px] tracking-[0.02em]"
           >
             <span className="inline-block h-2 w-2 rounded-full bg-accent" />
             <span className="font-medium">Alfred Choi</span>
@@ -50,10 +50,10 @@ export default async function ProjectDetail({
           </Link>
         </div>
       </header>
-      <main className="mx-auto max-w-[1440px] px-8 py-16">
+      <main className="shell py-16 project-prose">
         <Component />
       </main>
-      <footer className="mx-auto max-w-[1440px] px-8 border-t border-rule-strong py-8 pb-12 flex justify-between font-[family-name:var(--mono)] text-sm text-muted">
+      <footer className="shell border-t border-rule-strong py-8 pb-12 flex justify-between font-mono text-sm text-muted">
         {prev ? (
           <Link href={`/projects/${prev.slug}`} className="hover:text-fg transition-colors">
             ← {prev.title}

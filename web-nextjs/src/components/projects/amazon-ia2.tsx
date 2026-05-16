@@ -8,40 +8,32 @@ export default function AmazonIA2() {
         <div>
           <h3>The Problem</h3>
           <p>
-            The navigation system did not provide an intuitive interface for the
-            customers to navigate the Advertising Console.
+            Advertising Console&apos;s navigation was unintuitive and inaccessible.
+            Applications were buried behind a hover-triggered slide-out menu that
+            screen readers couldn&apos;t reach and that collapsed the moment a user
+            moved their cursor away — forcing repeated attempts just to switch
+            between products.
           </p>
           <ul>
             <li>
               <p>
-                <strong>Accessibility: </strong>
-                All the applications were hidden behind a slide out menu that
-                could only be accessed by the customer when they hovered over the
-                hamburger menu. Not only is this design not accessible for screen
-                readers, the menu would auto collapse when the customer hovered
-                out of the slide out menu. This hovering behaviour led to
-                customers having to open the navigation menu multiple times to
-                navigate to another application.
+                <strong>Accessibility:</strong> The hover-only menu was unusable
+                for keyboard and assistive-technology users, violating WCAG
+                guidelines and frustrating all customers.
               </p>
             </li>
             <li>
               <p>
-                <strong>Rebranding: </strong>
-                The old navigation system had dated designs that had not been
-                updated since the launch of Amazon Advertising. Due to the
-                strong growth of Amazon Advertising over the past years,
-                leadership decided to rebrand Amazon Advertising to bring the
-                design more inline with other Amazon products.
+                <strong>Rebranding:</strong> Amazon Advertising had outgrown its
+                original visual identity. Leadership mandated a rebrand aligned
+                with the broader Amazon design language.
               </p>
             </li>
             <li>
               <p>
-                <strong>Technical Debt: </strong>
-                As mentioned in the previous point, the navigation system has not
-                been updated since the launch of Amazon Advertising. The
-                navigation menu was written with a combination of Java and React.
-                The React application fully relied on <code>props</code> for
-                state management which resulted &quot;prop drilling&quot;.
+                <strong>Technical Debt:</strong> The nav was a Java/React hybrid
+                that relied entirely on prop drilling for state — fragile,
+                difficult to extend, and never refactored since launch.
               </p>
             </li>
           </ul>
@@ -49,59 +41,53 @@ export default function AmazonIA2() {
         <div className="flex flex-col justify-center">
           <Image
             src="/projects/amazon-ia2/advertising-console-old.png"
-            alt="Amazon Ads Nav"
+            alt="Legacy Advertising Console navigation"
             width={600}
             height={400}
-            className="w-full h-auto shadow-[5px_5px_5px_rgba(0,0,0,0.2)]"
+            className="w-full h-auto rounded-sm"
             unoptimized
           />
         </div>
       </div>
 
-      <hr className="my-8 border-t-2 border-dotted border-[#ddd] w-4/5 mx-auto" />
+      <hr />
 
       <h3>Challenges</h3>
       <ul>
         <li>
           <p>
-            <strong>Resourcing Constraints: </strong>This project required both
-            backend and frontend changes to the application and the split was
-            roughly 30% and 70% respectively. There were two Software
-            Development Engineers (SDE) and only one Front End Engineer (FEE)
-            working on this project. The front end development become the
-            bottleneck of this project.
+            <strong>Resourcing:</strong> The project split roughly 30/70 between
+            backend and frontend work, but the team had two SDEs and only one
+            Front End Engineer. Frontend delivery became the critical path.
           </p>
         </li>
         <li>
           <p>
-            <strong>Architecture Constraints: </strong>The legacy navigation
-            renders on the client side. Our team wanted to implement server side
-            rendering (SSR) for the navigation to improve the client side
-            rendering performance. However, due to the reduced resourcing and
-            time constraints, our team decided to leverage existing client side
-            rendering architecture to complete the project on time.
+            <strong>Architecture Trade-offs:</strong> We wanted server-side
+            rendering to improve load performance, but the timeline and reduced
+            headcount made it impractical. We shipped on the existing CSR
+            architecture and deferred SSR to a follow-up initiative.
           </p>
         </li>
       </ul>
 
-      <hr className="my-8 border-t-2 border-dotted border-[#ddd] w-4/5 mx-auto" />
+      <hr />
 
       <h3>Results</h3>
       <Image
         src="/projects/amazon-ia2/amazon-ia2.png"
-        alt="Amazon Ads New Nav"
+        alt="Redesigned Advertising Console navigation"
         width={1200}
         height={600}
-        className="w-full h-auto shadow-[5px_5px_5px_rgba(0,0,0,0.2)]"
+        className="w-full h-auto rounded-sm"
         unoptimized
       />
       <p>
-        From design to launch, the project took 11 months and our team was able
-        to launch the rebranding and new information architecture on time in
-        October 2021. Although we did not implement SSR for this project, the new
-        Javascript bundle that we developed still included 13% reduction in
-        Javascript execution time, 10% reduction in bundle size and 13 point
-        increase in Lighthouse score.
+        Shipped on time in October 2021 after 11 months of development. Even
+        without SSR, the new bundle delivered a 13% reduction in JavaScript
+        execution time, 10% smaller bundle size, and a 13-point improvement in
+        Lighthouse score — while making the navigation fully accessible for the
+        first time.
       </p>
     </>
   );

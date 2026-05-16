@@ -9,14 +9,23 @@ const navLinks = [
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-rule backdrop-blur-[8px]" style={{ background: "color-mix(in oklab, var(--bg) 88%, transparent)" }}>
-      <div className="mx-auto max-w-[1440px] px-8 flex items-center justify-between py-[18px]">
-        <Link href="/" className="flex items-center gap-3 font-[family-name:var(--mono)] text-[13px] tracking-[0.02em]">
+    <header
+      className="sticky top-0 z-50 border-b border-rule backdrop-blur-[8px]"
+      style={{ background: "color-mix(in oklab, var(--bg) 88%, transparent)" }}
+    >
+      <div className="shell flex items-center justify-between py-[18px]">
+        <Link
+          href="/"
+          className="flex items-center gap-3 font-mono text-[13px] tracking-[0.02em]"
+        >
           <span className="inline-block h-2 w-2 rounded-full bg-accent" />
           <span className="font-medium">Alfred Choi</span>
           <span className="text-muted">— Principal Frontend Engineer</span>
         </Link>
-        <nav className="hidden md:flex gap-7 font-[family-name:var(--mono)] text-[12px] tracking-[0.04em]" aria-label="Section">
+        <nav
+          className="hidden md:flex gap-7 font-mono text-[12px] tracking-[0.04em]"
+          aria-label="Section"
+        >
           {navLinks.map(({ href, num, label }) => (
             <a
               key={href}

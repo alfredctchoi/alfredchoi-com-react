@@ -7,22 +7,22 @@ const skillGroups = [
   },
   {
     title: "Frameworks & Tooling",
-    items: ["React", "Next.js", "Tailwind", "TanStack Query", "GraphQL", "Node.js"],
+    items: ["React", "Next.js", "Tailwind", "TanStack Query", "GraphQL", "Node.js", "Vitest", "Cypress", "Playwright"],
   },
   {
     title: "Platform & Practice",
-    items: ["AWS (CDK, CloudFront, S3, ECS)", "Docker", "Web performance", "Mentoring", "Hiring", "Scrum Master"],
+    items: ["Claude", "AWS (CDK, CloudFront, S3, ECS)", "Docker", "Braze (email marketing)", "Web performance", "Mentoring", "Hiring", "Scrum Master"],
   },
 ];
 
 export default function Skills() {
   return (
     <section className="py-24 max-md:py-16 border-t border-rule-strong" id="skills">
-      <div className="mx-auto max-w-[1440px] px-8">
+      <div className="shell">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14 md:items-end">
           <div>
             <FadeIn>
-              <div className="font-[family-name:var(--mono)] text-[11px] tracking-[0.08em] text-accent font-medium">
+              <div className="font-mono text-[11px] tracking-[0.08em] text-accent font-medium">
                 03 / Skills &amp; toolkit
               </div>
             </FadeIn>
@@ -39,20 +39,16 @@ export default function Skills() {
           </FadeIn>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 border-t border-b border-rule items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 items-start">
           {skillGroups.map(({ title, items }, i) => (
             <FadeIn
               key={title}
               delay={i * 60}
               className={`py-7 max-md:py-5 ${
-                i < skillGroups.length - 1
-                  ? "md:border-r md:border-rule max-md:border-b max-md:border-rule"
-                  : ""
-              } ${
                 i === 0 ? "md:pr-8" : i === skillGroups.length - 1 ? "md:pl-8" : "md:px-8"
               }`}
             >
-              <h4 className="font-[family-name:var(--mono)] text-[10.5px] tracking-[0.08em] uppercase text-muted font-medium m-0 mb-4">
+              <h4 className="font-mono text-[10.5px] tracking-[0.08em] uppercase text-muted font-medium m-0 mb-4">
                 {title}
               </h4>
               <ul className="list-none p-0 m-0 grid gap-2.5">

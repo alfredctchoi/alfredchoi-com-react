@@ -5,75 +5,67 @@ export default function TelusNav() {
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
-          <h2>TELUS Navigation</h2>
+          <h2>My TELUS Navigation Migration</h2>
           <h3>Background</h3>
           <p>
-            In the previous version of My TELUS, the navigation menu did not
-            have the logic to serve all the different customer segments. For
-            example, corporate users would require a different navigation menu
-            context than a regular consumer. Our team set out to solve the
-            following problems for this project:
+            The legacy My TELUS navigation couldn&apos;t serve different customer
+            segments — corporate users saw the same menu as consumers. We set out
+            to solve three problems:
           </p>
           <ul>
             <li>
               <p>
-                <strong>Information Architecture:</strong> provide a consistent
-                information hierarchy to users to allow users to easily navigate
-                the website
+                <strong>Information Architecture:</strong> Establish a consistent
+                navigation hierarchy that helps users find what they need without
+                guessing.
               </p>
             </li>
             <li>
               <p>
-                <strong>Scalability:</strong> provide a framework that will allow
-                the ability to serve all the customer segments
+                <strong>Scalability:</strong> Build a framework capable of
+                serving segment-specific navigation (consumer, corporate, small
+                business) from a single codebase.
               </p>
             </li>
             <li>
               <p>
-                <strong>Real Estate:</strong> having the navigation menu on the
-                left hand side resulted wasted real estate under the navigation
-                menu
+                <strong>Screen Real Estate:</strong> The left-hand sidebar wasted
+                vertical space below the nav items — reclaiming it meant more
+                room for content.
               </p>
             </li>
           </ul>
 
           <Image
             src="/projects/telus-nav/nav-gif.gif"
-            alt="TELUS Nav"
+            alt="Navigation migration demo"
             width={400}
             height={600}
-            className="w-full h-auto shadow-[5px_5px_5px_rgba(0,0,0,0.2)] md:hidden"
+            className="w-full h-auto rounded-sm md:hidden"
             unoptimized
           />
 
-          <h3>Challenges: Technical Complexity</h3>
+          <h3>Technical Challenges</h3>
           <p>
-            The migration from our legacy stack (PHP) created a non ideal
-            situation for our portal because we now had two authentication
-            mechanisms. One for the PHP stack and one for the Javascript stack.
-            Since we could not completely shut down our legacy system, we had to
-            develop a solution that was able to be used in both the legacy and
-            new stack. This means that our solution needs to be able to support
-            both authentication methods. Again, I would like to reiterate that
-            this is not ideal but we were able to solve the problem by creating
-            a essentially routing the user through two login portals behind the
-            scenes to ensure that sessions were set in both authentication
-            mechanisms. This allowed our navigation menu to be shared with both
-            legacy and new stack.
+            Migrating from PHP to JavaScript meant running two authentication
+            systems in parallel — one for the legacy stack and one for the new.
+            Since we couldn&apos;t fully decommission the old system, we built a
+            transparent dual-login flow that established sessions on both stacks
+            behind the scenes. This let a single navigation component work across
+            both environments.
           </p>
           <p>
-            We ended building an API that fetches the customer information and
-            determines which navigation items the user has access to before
-            returning scripts and content to the front end to be loaded in
-            dynamically.
+            We built an API that resolves the customer&apos;s segment and permissions,
+            then returns the appropriate navigation structure — scripts and
+            content loaded dynamically on the client.
           </p>
         </div>
         <div className="hidden md:block">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/projects/telus-nav/nav-gif.gif"
-            alt="TELUS Nav"
-            className="w-full h-auto"
+            alt="Navigation migration demo"
+            className="w-full h-auto rounded-sm"
           />
         </div>
       </div>

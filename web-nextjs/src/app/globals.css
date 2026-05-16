@@ -19,6 +19,14 @@
   --color-muted: var(--muted);
   --color-rule: var(--rule);
   --color-rule-strong: var(--rule-strong);
+  --font-sans: var(--sans);
+  --font-mono: var(--mono);
+}
+
+@utility shell {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 2rem;
 }
 
 * { box-sizing: border-box; }
@@ -41,6 +49,64 @@ body {
 a { color: inherit; text-decoration: none; }
 
 ::selection { background: var(--accent); color: #fff; }
+
+.project-prose h2 {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin: 0 0 2rem;
+}
+
+.project-prose h3 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin: 2rem 0 1rem;
+}
+
+.project-prose p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--fg);
+  margin: 1rem 0;
+}
+
+.project-prose ul,
+.project-prose ol {
+  padding-left: 1.25rem;
+  margin: 1rem 0;
+}
+
+.project-prose li {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.project-prose strong {
+  font-weight: 500;
+  color: var(--fg);
+}
+
+.project-prose code {
+  font-family: var(--mono);
+  font-size: 13px;
+  background: var(--rule);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.project-prose hr {
+  border: none;
+  border-top: 1px solid var(--rule-strong);
+  margin: 3rem auto;
+  width: 100%;
+}
+
+.project-prose img {
+  border-radius: 2px;
+}
 
 @media (prefers-reduced-motion: reduce) {
   [data-fade] { opacity: 1 !important; transform: none !important; transition: none !important; }

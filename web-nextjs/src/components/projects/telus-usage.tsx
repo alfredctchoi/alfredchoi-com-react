@@ -1,4 +1,10 @@
 import Image from "next/image";
+import ImageCrossfade from "./image-crossfade";
+
+const usageImages = [
+  { src: "/projects/telus-usage/old.png", alt: "Legacy usage page", label: "Before" },
+  { src: "/projects/telus-usage/new.png", alt: "Redesigned usage page", label: "After" },
+];
 
 export default function TelusUsage() {
   return (
@@ -6,79 +12,59 @@ export default function TelusUsage() {
       <h2>TELUS Usage Redesign</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
-          <h3>Legacy Usage</h3>
+          <h3>Context</h3>
           <p>
-            The previous iteration of the usage page was developed in PHP using
-            the Code Igniter framework and has not been updated since 2015. We
-            took the opportunity to redesign the usage page while migrating from
-            PHP to Javascript.
+            The usage page was a 2015-era PHP view built on CodeIgniter — never
+            updated, difficult to maintain, and unable to support the new
+            unlimited plan structures launching in 2018. We took the migration to
+            JavaScript as an opportunity to redesign the experience from scratch.
           </p>
 
           <Image
             src="/projects/telus-usage/old.png"
-            alt="Old TELUS usage"
+            alt="Legacy usage page"
             width={400}
             height={600}
-            className="w-full h-auto shadow-[5px_5px_5px_rgba(0,0,0,0.2)] md:hidden"
+            className="w-full h-auto rounded-sm md:hidden"
             unoptimized
           />
 
-          <h3>Challenges: Business Complexity</h3>
+          <h3>Business Complexity</h3>
           <p>
-            Our design and code had to be able to support all the permutations
-            of mobility plans that were sold within the past decade. This also
-            includes the new unlimited plans that were launched July 2018. We
-            originally start down the path where we would build different usage
-            layouts based on the mobility plan the user was on but realized that
-            there would be too many permutations to build. We end up going with
-            a generic solution that displays all the meters that the user was
-            consuming as a starting point. Once we have determined that this
-            generic solution solves for the majority of the use cases, we can
-            then determine design patterns and iterate on the design.
+            The design needed to handle every plan permutation sold over the past
+            decade — legacy tiered plans, shared data pools, and the newly
+            launched unlimited tiers. We initially explored per-plan layouts but
+            quickly realized the permutation count was unmanageable. Instead, we
+            built a generic meter-based system that adapts to any plan type,
+            validated it against the majority of use cases, and iterated from
+            there.
           </p>
 
           <Image
             src="/projects/telus-usage/new.png"
-            alt="New TELUS usage"
+            alt="Redesigned usage page"
             width={400}
             height={600}
-            className="w-full h-auto shadow-[5px_5px_5px_rgba(0,0,0,0.2)] md:hidden"
+            className="w-full h-auto rounded-sm md:hidden"
             unoptimized
           />
 
-          <h3>Challenges: Technical Complexity</h3>
+          <h3>Technical Complexity</h3>
           <p>
-            To further complicate the project, we had to consume many legacy
-            upstream service calls to compose data structures to fit our designs.
-            For example, we would have to make sequential service calls and then
-            manually stitch the data together based on identifiers from the
-            resulting payloads. This increased the complexity of our API more
-            than we would have wanted. Many of these complexities can be resolved
-            at the database level.
-          </p>
-          <p>
-            Moreover, these service calls had high response times. We decided to
-            load different portions of the page asynchronously to increase the
-            perceived performance.
+            The backend required sequential calls to multiple legacy services,
+            stitching payloads together by shared identifiers — complexity that
+            ideally belongs at the database level. Response times were high, so
+            we loaded page sections asynchronously to keep the perceived
+            performance fast while data resolved in the background.
           </p>
         </div>
-        <div className="hidden md:block space-y-8">
-          <Image
-            src="/projects/telus-usage/old.png"
-            alt="Old TELUS usage"
+        <div className="hidden md:block">
+          <ImageCrossfade
+            images={usageImages}
+            interval={3000}
             width={400}
             height={600}
-            className="w-full h-auto shadow-[5px_5px_5px_rgba(0,0,0,0.2)]"
-            unoptimized
-          />
-          <hr className="border-t-2 border-dotted border-[#ddd] w-4/5 mx-auto" />
-          <Image
-            src="/projects/telus-usage/new.png"
-            alt="New TELUS usage"
-            width={400}
-            height={600}
-            className="w-full h-auto shadow-[5px_5px_5px_rgba(0,0,0,0.2)]"
-            unoptimized
+            className="w-full"
           />
         </div>
       </div>

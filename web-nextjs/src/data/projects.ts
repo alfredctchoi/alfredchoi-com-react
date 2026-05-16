@@ -12,7 +12,7 @@ const projects: ProjectEntry[] = [
     image: "/projects/amazon-ia2/amazon-ia2.png",
     shadow: true,
     description:
-      "In October 2021, Amazon Advertising rebranded and introduced new information architecture in Advertising Console. This launch simplifies application navigation and is also fully accessible.",
+      "Led a full navigation redesign and rebrand for Amazon Advertising Console — delivering a fully accessible information architecture with 13% faster JS execution and 10% smaller bundles.",
     slug: "amazon-ia2",
   },
   {
@@ -20,7 +20,7 @@ const projects: ProjectEntry[] = [
     image: "/projects/telus-pom/telus-peace-of-mind.jpg",
     shadow: true,
     description:
-      "In July of 2019, TELUS launched Peace of Mind Plans which redefined the construct of the mobility plan. The change eliminated overage charges for mobility customers and introduced the ability to finance a device that was separate from your plan.",
+      "Shipped the frontend for TELUS's biggest plan restructuring in years — unlimited data, device financing, and new usage experiences across multiple teams and legacy systems.",
     slug: "telus-pom",
   },
   {
@@ -28,7 +28,7 @@ const projects: ProjectEntry[] = [
     image: "/projects/telus-pom/telus-usage-overhaul.png",
     shadow: false,
     description:
-      "In 2018, my team and I worked on redesigning the mobility usage page from the ground up at TELUS. We worked closely with our designers to implement a design that was both intuitive and functional.",
+      "Redesigned the mobility usage page from scratch — replacing a 2015-era PHP view with a React app that handles every plan permutation from the past decade while loading asynchronously for perceived speed.",
     slug: "telus-usage",
   },
   {
@@ -36,7 +36,7 @@ const projects: ProjectEntry[] = [
     image: "/projects/telus-nav/telus-left-nav.png",
     shadow: false,
     description:
-      "When I joined TELUS, the company was in the middle of a transition from their legacy technology stack to a more modern stack written in Javascript. One of the initiatives at the time was to migrate the old navigation menu to the new stack while having it backwards compatible with the legacy stack.",
+      "Migrated the My TELUS navigation from a legacy PHP stack to a JavaScript SPA — solving dual-authentication, multi-segment routing, and full backwards compatibility in one shared component.",
     slug: "telus-nav",
   },
 ];

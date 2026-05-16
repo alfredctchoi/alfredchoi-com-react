@@ -6,25 +6,23 @@ export default function TelusPom() {
       <h2>TELUS Peace of Mind Plans</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
+          <h3>Background</h3>
           <p>
-            Before Peace of Mind Plans were introduced, mobility customers faced
-            two major issues:
+            TELUS mobility customers faced two long-standing pain points:
           </p>
           <ol>
             <li>
               <p>
-                <strong>Data Overage Complaints:</strong> Many of TELUS&apos;
-                customers have expressed frustration about overage charges with
-                their data usage.
+                <strong>Data overage charges:</strong> Customers were frequently
+                surprised by overage fees, generating significant support volume
+                and dissatisfaction.
               </p>
             </li>
             <li>
               <p>
-                <strong>Subsidized Plans:</strong> For the mobility users that
-                were on a subsidized phone plan, our systems were not able to
-                differentiate which portion of the billing statement was going
-                towards the phone subsidy and which portion was going to the
-                phone plan.
+                <strong>Opaque device subsidies:</strong> Billing systems
+                couldn&apos;t separate plan costs from device financing, making it
+                impossible for customers to understand what they were paying for.
               </p>
             </li>
           </ol>
@@ -32,97 +30,88 @@ export default function TelusPom() {
         <div>
           <Image
             src="/projects/telus-pom/telus-peace-of-mind.jpg"
-            alt="TELUS Peace of Mind"
+            alt="TELUS Peace of Mind Plans"
             width={600}
             height={400}
-            className="w-full h-auto"
+            className="w-full h-auto rounded-sm"
             unoptimized
           />
         </div>
       </div>
 
-      <hr className="my-8 border-t-2 border-dotted border-[#ddd] w-4/5 mx-auto" />
+      <hr />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <Image
             src="/projects/telus-pom/telus-device-financing-example.png"
-            alt="TELUS Device Financing"
+            alt="TELUS Device Financing breakdown"
             width={600}
             height={400}
-            className="w-full h-auto"
+            className="w-full h-auto rounded-sm"
             unoptimized
           />
         </div>
         <div>
           <h3>Solution</h3>
           <p>
-            Device financing allows TELUS to clearly separate the charges for
-            the phone plan and charges for the device if the user purchased a
-            device with a phone plan through TELUS. As many of the mobile
-            devices are becoming increasingly expensive, device financing makes
-            the devices more affordable.
+            Peace of Mind Plans introduced unlimited data (throttled after the
+            cap, never charged) and separated device financing into its own line
+            item. Customers could now see exactly what they pay for their plan
+            versus their phone.
           </p>
           <p>
-            The business decided to solve the two problems by introducing
-            unlimited data plans and device financing. Unlimited plans will allow
-            customers to consume data at LTE speeds until they hit their data
-            limit. After the user consumes all of their data for the month, they
-            can continue to use data at a slower speed. The data that they
-            consumed on the slower network speed will not be charged. Users can
-            purchase Fast Passes to resume their LTE network speeds if they
-            wish.
+            After hitting their data limit, users continue browsing at reduced
+            speeds at no extra cost — or purchase a Fast Pass to restore full LTE
+            speeds instantly.
           </p>
         </div>
       </div>
 
-      <hr className="my-8 border-t-2 border-dotted border-[#ddd] w-4/5 mx-auto" />
+      <hr />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <h3>Challenges</h3>
           <p>
-            This is fundamental change in the way all the underlying systems
-            work at TELUS. There needed to be collaboration and coordination
-            from every level of the organization. From the systems of records
-            level all the way up to the digital experiences.
+            This was a fundamental restructuring of how TELUS bills and meters
+            data — touching systems from the records layer up to the customer-facing
+            digital experience. Coordination spanned multiple organizations.
           </p>
           <p>
-            Our team was responsible for updating the usage and plan change
-            digital experiences in My TELUS. Because the data metering systems
-            needed to be updated to account for unlimited data usage, our team
-            had to develop a new usage experience to accommodate for users with
-            the new unlimited plans.
+            Our team owned the usage and plan-change experiences in My TELUS. We
+            built new usage visualizations for unlimited plans and implemented
+            complex eligibility rules that governed which customers could migrate
+            and when.
           </p>
         </div>
-        <div className="text-center">
+        <div>
           <Image
             src="/projects/telus-pom/telus-usage-overhaul.png"
-            alt="TELUS usage overhaul"
+            alt="Updated usage experience"
             width={600}
             height={400}
-            className="w-full h-auto"
+            className="w-full h-auto rounded-sm"
             unoptimized
           />
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
         <div>
           <p>
-            For the plan change digital experience, there were complex rules on
-            which users were allowed to switch to the new plans and which users
-            could only modify their existing plans. This was done to ensure that
-            users were gradually migrated to the new plans in a controlled
-            manner.
+            The plan-change flow required a controlled rollout — eligibility
+            rules determined which segments could switch immediately and which
+            would be migrated gradually, preventing system overload and ensuring
+            a smooth transition.
           </p>
         </div>
-        <div className="text-center">
+        <div>
           <Image
             src="/projects/telus-pom/telus-plans-and-devices.png"
-            alt="TELUS plans and devices"
+            alt="TELUS plans and devices selection"
             width={600}
             height={400}
-            className="w-full h-auto"
+            className="w-full h-auto rounded-sm"
             unoptimized
           />
         </div>
