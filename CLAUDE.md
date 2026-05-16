@@ -19,6 +19,7 @@ Commands (run from `web-nextjs/`):
 - `npm run dev` — dev server
 - `npm run build` — production build (static export to `out/`)
 - `npm run lint` — ESLint
+- `CLOUDFRONT_DISTRIBUTION_ID=<id> ./scripts/deploy.sh` — build, upload to S3, invalidate CloudFront
 
 Configured with `output: "export"` in `next.config.ts` for fully static site generation. All pages must be statically renderable — no server-side features (API routes, middleware, dynamic server rendering).
 
