@@ -1,43 +1,48 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --accent: #E5482C;
+  --bg: #F4F2EC;
+  --fg: #14130F;
+  --muted: #6B6A64;
+  --rule: #1413101A;
+  --rule-strong: #14131033;
+  --serif: "Times New Roman", Times, serif;
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: var(--font-ibm-plex-mono), ui-monospace, "SFMono-Regular", Menlo, monospace;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: "Roboto", sans-serif;
+  --color-accent: var(--accent);
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
 }
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: "Roboto", sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--sans);
   font-size: 16px;
-  line-height: 1.75rem;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 500;
-  text-transform: uppercase;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern", "liga";
   margin: 0;
+  padding: 0;
 }
 
-a, strong {
-  color: #e91d63;
-}
+a { color: inherit; text-decoration: none; }
 
-a {
-  text-decoration: none;
-}
+::selection { background: var(--accent); color: #fff; }
 
-ul {
-  list-style: disc;
-  padding-left: 2rem;
-}
-
-p {
-  margin: 1rem 0;
+@media (prefers-reduced-motion: reduce) {
+  [data-fade] { opacity: 1 !important; transform: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
 }
