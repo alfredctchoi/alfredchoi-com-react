@@ -19,7 +19,7 @@ export default function Header() {
           </div>
           <div className="flex items-center gap-2.5">
             <a
-              href="https://www.linkedin.com/in/alfred-choi-28173527/"
+              href="https://www.linkedin.com/in/alfredctchoi/"
               target="_blank"
               rel="noreferrer noopener"
               aria-label="LinkedIn"

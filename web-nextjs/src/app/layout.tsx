@@ -9,7 +9,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Alfred Choi",
+  title: "ALFRED CHOI | Technical Lead & Software Engineer",
   description: "Alfred Choi - Software Engineer",
 };
 
