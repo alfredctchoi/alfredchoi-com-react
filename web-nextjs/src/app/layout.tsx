@@ -9,10 +9,34 @@ const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-ibm-plex-mono",
 });
 
+const siteUrl = "https://www.alfredchoi.com";
+
 export const metadata: Metadata = {
-  title: "Alfred Choi — Principal Frontend Engineer",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Alfred Choi — Principal Frontend Engineer",
+    template: "%s | Alfred Choi",
+  },
   description:
     "Technical Lead specializing in frontend — building web applications that are fast, scalable, and solve real problems.",
+  openGraph: {
+    type: "website",
+    locale: "en_CA",
+    url: siteUrl,
+    siteName: "Alfred Choi",
+    title: "Alfred Choi — Principal Frontend Engineer",
+    description:
+      "Technical Lead specializing in frontend — building web applications that are fast, scalable, and solve real problems.",
+  },
+  twitter: {
+    card: "summary",
+    title: "Alfred Choi — Principal Frontend Engineer",
+    description:
+      "Technical Lead specializing in frontend — building web applications that are fast, scalable, and solve real problems.",
+  },
+  alternates: {
+    canonical: siteUrl,
+  },
 };
 
 export default function RootLayout({

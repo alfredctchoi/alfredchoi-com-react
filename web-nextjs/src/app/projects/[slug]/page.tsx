@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import projects from "@/data/projects";
 import AmazonIA2 from "@/components/projects/amazon-ia2";
@@ -16,6 +17,25 @@ export function generateStaticParams() {
   return projects.map((project) => ({
     slug: project.slug,
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
+  if (!project) return {};
+  return {
+    title: project.title,
+    description: project.description,
+    openGraph: {
+      title: project.title,
+      description: project.description,
+      images: [project.image],
+    },
+  };
 }
 
 export default async function ProjectDetail({
