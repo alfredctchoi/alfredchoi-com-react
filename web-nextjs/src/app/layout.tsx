@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
-import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 const GA_TRACKING_ID = "G-FBGBNKX5P9";
@@ -50,18 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={ibmPlexMono.variable}>
       <body>{children}</body>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${GA_TRACKING_ID}');
-        `}
-      </Script>
+      <GoogleAnalytics gaId={GA_TRACKING_ID} />
     </html>
   );
 }
