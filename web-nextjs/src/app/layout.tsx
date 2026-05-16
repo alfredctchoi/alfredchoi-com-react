@@ -3,7 +3,7 @@ import { IBM_Plex_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-const GA_TRACKING_ID = "UA-52615001-1";
+const GA_TRACKING_ID = "G-FBGBNKX5P9";
 
 const ibmPlexMono = IBM_Plex_Mono({
   weight: ["400", "500"],
