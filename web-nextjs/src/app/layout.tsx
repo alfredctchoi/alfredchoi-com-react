@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
+
+const GA_TRACKING_ID = "G-FBGBNKX5P9";
 
 const ibmPlexMono = IBM_Plex_Mono({
   weight: ["400", "500"],
@@ -47,6 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={ibmPlexMono.variable}>
       <body>{children}</body>
+      <GoogleAnalytics gaId={GA_TRACKING_ID} />
     </html>
   );
 }
